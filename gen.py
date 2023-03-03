@@ -80,27 +80,23 @@ class genetic :
 
         for m in range(0,8):
             for n in range(1,8):
+                
                 if (Chromosome[m]+n >= 0)and(Chromosome[m]+n <= 7)and(m+n >= 0)and(m+n <= 7):
                     if type(Table[Chromosome[m]+n][m+n][0])==list:
                         ChromosomeScore[m]=ChromosomeScore[m]+1
-
-        for m in range(0,8):
-            for n in range(1,8):
+                        
                 if (Chromosome[m]-n >= 0)and(Chromosome[m]-n <= 7)and(m-n >= 0)and(m-n <= 7):
                     if type(Table[Chromosome[m]-n][m-n][0])==list:
                         ChromosomeScore[m]=ChromosomeScore[m]+1
-
-        for m in range(0,8):
-            for n in range(1,8):
+                        
                 if (Chromosome[m]-n >= 0)and(Chromosome[m]-n <= 7)and(m+n >= 0)and(m+n <= 7):
                     if type(Table[Chromosome[m]-n][m+n][0])==list:
                         ChromosomeScore[m]=ChromosomeScore[m]+1
-
-        for m in range(0,8):
-            for n in range(1,8):
+                        
                 if (Chromosome[m]+n >= 0)and(Chromosome[m]+n <= 7)and(m-n >= 0)and(m-n <= 7):
                     if type(Table[Chromosome[m]+n][m-n][0])==list:
                         ChromosomeScore[m]=ChromosomeScore[m]+1
+                    
         
         self.indexNumber = self.indexNumber + 1
         for i in range(0,8): 
