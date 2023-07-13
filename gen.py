@@ -105,7 +105,7 @@ class genetic :
         self.Score = Score
 
         
-        self.ChromosomeBank.at[self.indexNumber,:] = [strChromosome, Score,Score] 
+        self.ChromosomeBank.at[self.indexNumber,('Chromosome','score','chance')] = [strChromosome, Score,Score] 
         sumS = self.ChromosomeBank['score'].sum()
         if sumS==0: 
             sumS = 1 
